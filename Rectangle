@@ -1,0 +1,29 @@
+public class Rectangle 
+{
+ 
+ //declare instance vars here
+	 double width;
+	 double length;
+  //write constructor here
+public Rectangle(double width, double length) {
+
+	this.width = width;
+	this.length = length;
+}
+  //write the area method here
+public double area(){
+	return length*width;
+}
+    public static void main(String[] args) 
+    {
+        
+      //instantiate Rectangle object
+      Rectangle rect = new Rectangle(50.5, 25.7);
+      System.out.println("width = "+rect.width);
+      System.out.println("length = "+rect.length);
+      //print instance variables
+      System.out.println("area = "+rect.area());
+      //print area
+  
+    }
+}
