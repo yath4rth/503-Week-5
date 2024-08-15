@@ -1,0 +1,51 @@
+//This import is necessary for your program to run in code validator
+import java.lang.reflect.*;
+
+public class Cup {
+ 
+ 
+ //declare instance var here
+	private int fluidAmount;
+ //write constructor here
+public Cup() {
+	this.fluidAmount = 1;
+}
+    
+    //write get method here 
+public int getFluidAmount() {
+	return fluidAmount;
+}
+    //write pour method here
+public void pour(int ml) {
+	fluidAmount += ml;
+	if (fluidAmount>250) {
+		fluidAmount = 250;
+	}
+}
+  
+//write empty method here
+public void empty() {
+	fluidAmount = 0;
+	
+}    
+    //write isFull method here
+public boolean isFull() {
+	if (fluidAmount == 250) {
+		return true;
+	}
+	return false;
+}
+
+public static void main(String[] args) {
+    	
+       //initialise Cup object here
+	Cup cup = new Cup();
+	cup.pour(300);
+	System.out.println("fluidAmount = "+cup.getFluidAmount());
+	System.out.println("isFull = "+cup.isFull());
+}
+}
+	
+
+
+
