@@ -1,0 +1,43 @@
+import java.lang.reflect.*;
+
+public class CreditCard {
+	private int owing;
+	private String name;
+
+public CreditCard(String name){
+	this.owing = -1;
+	this.name = name;
+}
+
+public int getOwing() {
+	return owing;
+}
+
+public void spend(int amount)
+{
+	if(amount>=0)
+	{
+		owing -= amount;
+	}
+}
+
+public void payback(int amount)
+{
+	if(amount>=0)
+	{
+		owing += amount;
+		if (owing>0)
+		{
+			owing = 0;
+		}
+	}
+}
+
+public static void main(String[] args) {
+	CreditCard c = new CreditCard("Robin Banks");
+	c.spend(50);
+	System.out.println("owing = "+c.getOwing());
+	c.payback(100);
+	System.out.println("owing = "+c.getOwing());
+}
+}
